@@ -5,12 +5,14 @@ import Home from './components/pages/Home'
 import Signup from './components/pages/Signup';
 import Result from './components/pages/Result'
 import './styles/App.css'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {AuthProvider} from './context/authContext'
 
 function App() {
   return (
     <div className="App">
       <Router>
+      <AuthProvider>
        <Layout>
         <Switch>
         <Route exact path='/' component={Home} />
@@ -20,6 +22,7 @@ function App() {
         <Route exact path='/result' component={Result} />
         </Switch>
        </Layout>
+       </AuthProvider>
       </Router>
     </div>
   );
