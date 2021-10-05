@@ -1,18 +1,14 @@
 import React from 'react'
 import Form from '../components/Form'
 import TextInput from './TextInput'
-import Checkbox from './Checkbox'
 import Button from './Button'
+import classes from '../styles/Login.module.css'
 
 export default function LoginForm() {
     return (
         <div>
-            <Form >
-                <TextInput 
-                type='text'
-                placeholder='Enter Name'
-                icon='person'
-                />
+            <Form className={`${classes.login}`}>
+                
                 <TextInput 
                 type='text'
                 placeholder='Enter email'
@@ -23,14 +19,7 @@ export default function LoginForm() {
                 placeholder='Enter Password'
                 icon='lock'
                 />
-                <TextInput 
-                type='password'
-                placeholder='Confirm password'
-                icon='lock_clock'
-                />
-                <Checkbox 
-                type='checkbox'
-                text=' I agree to the Terms &amp; Conditions'/>
+              
                 <Button>
                     <span>Submit Now</span>
                 </Button>
